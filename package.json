@@ -1,0 +1,29 @@
+{
+  "name": "ra_mock-store",
+  "version": "1.0.0",
+  "description": "Projeto de mock store virtual",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --silent=false"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcosPauloRTK/RA_mock-store.git"
+  },
+  "author": "Marcos Paulo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcosPauloRTK/RA_mock-store/issues"
+  },
+  "homepage": "https://github.com/MarcosPauloRTK/RA_mock-store#readme",
+  "dependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.21.0",
+    "@types/jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.0.5"
+  }
+}
