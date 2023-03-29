@@ -1,4 +1,5 @@
 import {
+  Product,
   getProducts,
   getProductByID,
   getCategories,
@@ -7,10 +8,8 @@ import {
   getMostVotedProduct,
   getAveragePrice,
   getCheapestProduct,
-  getMostExpansiveProduct,
+  getMostExpansiveProduct
 } from "../src/api_getters";
-
-import { Product } from "../src/api_getters";
 
 // getProducts()
 describe("getProducts", () => {
@@ -20,16 +19,16 @@ describe("getProducts", () => {
   });
 
   it("should contain all the results obtained by getProductsByID", async () => {
-    const array = [];
+    let array = [];
     for (let i = 1; i < 21; i++) {
-      const product = await getProductByID(i);
-      array.push(product);
+      array.push(getProductByID(i))
     }
+    array = await Promise.all(array)
 
     const data = await getProducts();
 
     expect(data).toEqual(array);
-  }, 8000);
+  });
 });
 
 // getProductByID()
